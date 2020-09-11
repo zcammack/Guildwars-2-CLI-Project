@@ -1,0 +1,11 @@
+Guildwars 2 API is accessed by making requests to 
+https://api.guildwars2.com using the following URI format:
+
+https://api.guildwars2.com/<version>/<endpoint>
+
+For example...
+
+https://api.guildwars2.com/v2/characters(access token)
+
+Will access the characters associated with the API-Key.
+
