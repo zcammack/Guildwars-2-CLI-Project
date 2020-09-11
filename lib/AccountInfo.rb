@@ -2,10 +2,13 @@ class Account
 
     @@all = []
 
-    attr_accessor :name, :guilds, :edition
+    attr_accessor :name, :id, :guilds, :edition
 
     def initialize(global)
         self.name = global["name"]
+        self.id = global["id"]
+        self.guilds = global["guilds"]
+        self.edition = global["access"]
         save
     end
 

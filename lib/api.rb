@@ -1,5 +1,7 @@
 require_relative 'AccountCharacters'
 require_relative 'AccountInfo'
+require_relative 'BankInfo'
+require_relative 'MaterialInfo'
 require 'rest-client'
 require 'json'
 require 'pry'
@@ -14,35 +16,36 @@ resp = RestClient.get('https://api.guildwars2.com/v2/characters?access_token=9BB
 char_hash = JSON.parse(resp.body)
 
 
-#The following is using #collect as a means to iterate over each item within
-#this array. Each array is then stored as an object with our Character class.
+#The following is using #collect as a means to iterate over each array within
+#this hash. Each array is then stored as an object with our Character class.
 
 account_characters = char_hash.collect do | character |
     Character.new(character)
-end
+endq
 
-#This next method assigns attributes to each character object, giving them meaning.
-
-account_characters.each do |toon|
-    toon.race = "race"
-    toon.gender = "gender"
-    toon.profession = "profession"
-    toon.level = "level"
-end
+#The following is to build out information for Basic Account Info.
 
 resp = RestClient.get('https://api.guildwars2.com/v2/account?access_token=9BBC841D-8BD6-444C-A381-7F377D5F2FDC431AA622-52A5-40DC-B9B7-6470A1F0BFBC')
 
 account_hash = JSON.parse(resp.body)
 
-#This is currently not working. We have integers in this hash that need to be converted.
+Account.new(account_hash)
 
-account_info = account_hash.collect do | global |
-    Account.new(global)
-    binding.pry
-end
 
-account_info.each do | data |
-    data.name = "name"
-    data.guilds = "guilds"
-    data.edition = "access"
-end
+#The following is to build out Account Bank Information.
+
+resp = RestClient.get('https://api.guildwars2.com/v2/account/bank?access_token=9BBC841D-8BD6-444C-A381-7F377D5F2FDC431AA622-52A5-40DC-B9B7-6470A1F0BFBC')
+
+bank_hash = JSON.parse(resp.body)
+
+Bank.new.content = bank_hash
+
+
+#The following is to build out Account Material Bank Information.
+
+resp = RestClient.get('https://api.guildwars2.com/v2/account/materials?access_token=9BBC841D-8BD6-444C-A381-7F377D5F2FDC431AA622-52A5-40DC-B9B7-6470A1F0BFBC')
+
+material_hash = JSON.parse(resp.body)
+
+Material.new.content = material_hash
+binding.pry

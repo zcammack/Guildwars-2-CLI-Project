@@ -6,6 +6,10 @@ class Character
 
     def initialize(character)
         self.name = character["name"]
+        self.race = character["race"]
+        self.gender = character["gender"]
+        self.level = character["level"]
+        self.profession = character["profession"]
         save
     end
 
