@@ -2,7 +2,7 @@ class Character
 
     @@all = []
 
-    attr_accessor :name, :race, :gender, :level, :profession
+    attr_accessor :global, :name, :race, :gender, :level, :profession
 
     def initialize(character)
         self.name = character["name"]

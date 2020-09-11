@@ -9,3 +9,26 @@ https://api.guildwars2.com/v2/characters(access token)
 
 Will access the characters associated with the API-Key.
 
+Current Goals:
+
+(Recreate License as .md file.)
+
+1. Assign API-Key as a variable to allow checking multiple accounts.
+
+2. Assign Global Name (AccountInfo :name) to Bank and Material Objects.
+
+3. Use item request to make sense of item ID's (Bank and Material).
+
+4. Use guild_details request to give a proper name to guild attribute (Account Info).
+
+5. Build CLI Menu.
+
+6. Refactor code as needed.
+
+Main Goal: Build a program that allows the user to check their in game Bank and characters without having to log into Guild Wars 2.
+
+OPTIONAL
+
+Find a way to integrate inventory to characters.
+
+Possibly inject Trade Post to allow browsing and possible use.

@@ -1,11 +1,13 @@
 class Bank
 
-    attr_accessor :content
+    attr_accessor :global, :id, :count, :binding
 
     @@all = []
 
-    def initialize
-        content = []
+    def initialize(item)
+       self.id = item["id"]
+       self.count = item["count"]
+       self.binding = item["binding"]
         save
     end
 
