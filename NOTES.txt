@@ -15,20 +15,16 @@ Current Goals:
 
 1. Assign API-Key as a variable to allow checking multiple accounts.
 
-2. Assign Global Name (AccountInfo :name) to Bank and Material Objects.
+2. Assign Global to Characters.
 
-3. Use item request to make sense of item ID's (Bank and Material).
+3. Use guild_details request to give a proper name to guild attribute (Account Info).
 
-4. Use guild_details request to give a proper name to guild attribute (Account Info).
+4. Build CLI Menu.
 
-5. Build CLI Menu.
+5. Refactor code as needed.
 
-6. Refactor code as needed.
-
-Main Goal: Build a program that allows the user to check their in game Bank and characters without having to log into Guild Wars 2.
+Main Goal: Build a program that allows the user to check their account information and characters without having to log into Guild Wars 2.
 
 OPTIONAL
 
 Find a way to integrate inventory to characters.
-
-Possibly inject Trade Post to allow browsing and possible use.

@@ -2,14 +2,15 @@ class Character
 
     @@all = []
 
-    attr_accessor :global, :name, :race, :gender, :level, :profession
+    attr_accessor :account, :name, :race, :gender, :level, :profession
 
-    def initialize(character)
+    def initialize(character, global)
         self.name = character["name"]
         self.race = character["race"]
         self.gender = character["gender"]
         self.level = character["level"]
         self.profession = character["profession"]
+        self.account = global
         save
     end
 
@@ -20,5 +21,4 @@ class Character
     def save
         @@all << self
     end
-
 end

@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-require 'open-uri'
-require 'nokogiri'
-require 'pry'
-
-require_relative '../lib/api.rb'
-require_relative '../lib/cli.rb'
-
-CLI.new.run
