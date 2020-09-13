@@ -102,7 +102,7 @@ Level: #{characters[input.to_i - 1].level}
                 puts '
 "DO YOU WANT TO SEE ANOTHER CHARACTER?"
                 
-Yes, No, or Menu?           '
+Yes or No?           '
                 input = gets.chomp.downcase
                 case input
                 when "no"
@@ -148,7 +148,7 @@ Available Content: #{accounts[input.to_i - 1].version}
                 puts '
 "DO YOU WANT TO SEE ANOTHER ACCOUNT?"
                 
-Yes, No, or Menu?           ' 
+Yes or No?           ' 
                 input = gets.chomp.downcase
                 case input
                 when "no"
