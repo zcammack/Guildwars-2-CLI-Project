@@ -15,7 +15,7 @@ Current Goals:
 
 1. Assign API-Key as a variable to allow checking multiple accounts.
 
-2. Assign Global to Characters.
+2. Assign Global to Characters. - Done
 
 3. Use guild_details request to give a proper name to guild attribute (Account Info).
 

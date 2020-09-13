@@ -1,5 +1,4 @@
 class Character
-
     @@all = []
 
     attr_accessor :account, :name, :race, :gender, :level, :profession
