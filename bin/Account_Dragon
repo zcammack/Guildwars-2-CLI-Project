@@ -2,14 +2,11 @@
 
 require 'rest-client'
 require 'json'
-require 'pry'
 
 require_relative '../lib/api'
 require_relative '../lib/cli'
 require_relative '../lib/AccountCharacters'
 require_relative '../lib/AccountInfo'
 require_relative '../lib/AccountGuilds'
-
-# https://api.guildwars2.com/v2/account?access_token=9BBC841D-8BD6-444C-A381-7F377D5F2FDC431AA622-52A5-40DC-B9B7-6470A1F0BFBC
 
 CLI.new.run

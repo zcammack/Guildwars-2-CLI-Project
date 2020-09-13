@@ -13,7 +13,6 @@ class Account
         add_characters(char_hash, self.global)
         add_guilds(account["guilds"])
         save
-        binding.pry
     end
 
     def save
