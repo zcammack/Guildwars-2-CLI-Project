@@ -7,13 +7,14 @@ Account Dragon will let you access information from the popular videogame Guild 
 
 ### Installation Guide
 #### An API Key is required for the program to function. It can be generated here: https://account.arena.net/applications
-	This program requires an ArenaNet account to function, which is required to create an account within the game and to play.
+	This program requires an ArenaNet account to function, which is required to create an account
+	within the game and to play.
 	
-	This program will not save any login information or otherwise related to your account and only accepts the API Key you 
-	provide it.
+	This program will not save any login information or otherwise related to your account and only
+	accepts the API Key you provide it.
 	
-	This program requires AT LEAST the account and character boxes be ticked. The rest are optional (until more functionality 
-	is added) but it's recommended to include everything.
+	This program requires AT LEAST the account and character boxes be ticked. The rest are optional
+	(until more functionality is added) but it's recommended to include everything.
 	
 	Once generated, you will only be required to enter the key once.
 	
