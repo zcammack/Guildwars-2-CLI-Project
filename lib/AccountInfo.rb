@@ -13,6 +13,7 @@ class Account
         add_characters(char_hash, self.global)
         add_guilds(account["guilds"])
         save
+        binding.pry
     end
 
     def save
@@ -31,9 +32,10 @@ class Account
     end
 
     def add_guilds(guild_data)
+        guild_hash = []
         guild_data.each do | guild |
             resp = RestClient.get("https://api.guildwars2.com/v1/guild_details?guild_id=#{guild}")
-            guild_hash = JSON.parse(resp.body)
+            guild_hash << JSON.parse(resp.body)
         end
         guild_hash.collect do | guild |
             new_guild = Guild.new(guild)

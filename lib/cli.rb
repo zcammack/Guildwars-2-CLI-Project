@@ -130,15 +130,19 @@ Yes, No, or Menu?           '
             accounts.each.with_index do |account, index|
                 puts "#{index + 1}. #{account.global}"
             end
+            guilds = []
+            Guild.all.each do | guild |
+                guilds << "#{guild.name}: #{guild.tag}"
+            end
             puts '
-"CHOOSE A NUMBER FROM THIS LIST OF GLOBALS."
+"CHOOSE A NUMBER FROM THIS LIST OF GLOBALS OR SAY MENU TO CHOOSE A DIFFERENT OPTION."
                  '
-                 input = gets.chomp
+            input = gets.chomp
             if (1..accounts.length).include?(input.to_i)
                 puts "
 Global: #{accounts[input.to_i - 1].global}
 Age (In Hours!): #{accounts[input.to_i - 1].age / 3600}
-Guilds: #{accounts[input.to_i - 1].guilds}
+Guilds (With Tags): #{guilds}
 Available Content: #{accounts[input.to_i - 1].version}
                      "
                 puts '
